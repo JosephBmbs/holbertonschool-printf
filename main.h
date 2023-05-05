@@ -1,3 +1,9 @@
+/**
+ * printf file
+ * 
+ * Auth : Youssef saad
+*/
+
 #ifndef _PRINTF_H
 #define _PRINTF_H
 
@@ -116,3 +122,10 @@ char *get_precision(char *p, params_t *params, va_list ap);
 int _printf(const char *format, ...);
 
 #endif
+
+
+/**
+ * printf file
+ * 
+ * Auth : Youssef saad
+*/
