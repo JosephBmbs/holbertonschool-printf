@@ -1,0 +1,68 @@
+.TH _PRINTF 3 "4 May 2023" "Version 1.0" "User Manual"
+
+.SH NAME
+_printf - prints formatted output
+
+.SH SYNOPSIS
+#include "main.h"\n
+int _printf(const char *format, ...);
+
+.SH DESCRIPTION
+The _printf function is a variadic function that prints formatted output to the standard output (stdout). It takes a format string and a variable number of arguments, and returns the number of characters printed.
+
+The format string can contain ordinary characters and conversion specifications. Conversion specifications begin with the % character and specify how the corresponding argument should be formatted and printed. The following conversion specifiers are supported:
+
+\fB%d\fP, \fB%i\fP - prints a decimal integer
+\fB%u\fP - prints an unsigned decimal integer
+\fB%o\fP - prints an unsigned octal integer
+\fB%x\fP, \fB%X\fP - prints an unsigned hexadecimal integer
+\fB%c\fP - prints a single character
+\fB%s\fP - prints a string of characters
+\fB%p\fP - prints a pointer address
+\fB%%\fP - prints a literal % character
+
+The format string can also include optional flags, width, precision, and length modifiers to control the formatting of the output. See below for a detailed explanation of each of these.
+
+.SH RETURN VALUE
+The _printf function returns the number of characters printed (excluding the null byte used to end the output to strings).
+
+If an error occurs, -1 is returned.
+
+.SH EXAMPLES
+Print a string: _printf("Hello, world!\n");
+Print an integer: _printf("%d\n", 42);
+Print a hexadecimal integer: _printf("%x\n", 0xdeadbeef);
+Print a string with a width of 10: _printf("%10s\n", "hello");
+Print a string with a precision of 3: _printf("%.3s\n", "foobar");
+Print a pointer address: _printf("%p\n", (void *)0xdeadbeef);
+
+.SH FLAGS
+The following flags can be used to modify the output format:
+
+\fB-\fP - left-align the output within the field width
+\fB+\fP - prefix a plus sign (+) or minus sign (-) to the output of a signed number
+\fB0\fP - zero-pad the output instead of padding with spaces
+\fB #\fP - prefix a 0, 0x, or 0X to the output of an octal, hexadecimal, or floating-point number, respectively
+\fB'\ '\fP - (a space) prefix a space to the output of a positive number
+\fB'\e[0m'\fP - reset the foreground and background color
+
+.SH WIDTH AND PRECISION
+The following format specifiers can be used to control the field width and precision of the output:
+
+\fB*\fP - the width or precision is specified by an integer argument
+\fB<n>\fP - the width or precision is specified by an integer constant
+
+.SH LENGTH MODIFIERS
+The following length modifiers can be used to specify the size of the argument:
+
+\fBhh\fP - for char
+\fBh\fP - for short
+\fBl\fP - for long
+\fBll\fP - for long long
+\fBL\fP - for long double
+
+.SH SEE ALSO
+printf(3)
+
+.SH AUTHORS
+Youssef Saad  & only him 
