@@ -1,19 +1,15 @@
 #include "main.h"
 
 /**
- * printf file
- * 
- * Auth : Youssef saad
-*/
-
-/**
- * convert - converter function, a clone of itoa
- * @num: number
- * @base: base
- * @flags: argument flags
- * @params: paramater struct
+ * convert - convert a number to a string in the specified base
  *
- * Return: string
+ * @num: the number to convert
+ * @base: the base to convert the number to
+ * @flags: flags that modify the conversion behavior
+ * @params: pointer to a parameter struct that contains
+ * conversion parameters
+ *
+ * Return: a string representation of the converted number
  */
 char *convert(long int num, int base, int flags, params_t *params)
 {

@@ -1,17 +1,15 @@
 #include "main.h"
 
 /**
- * printf file
- * 
- * Auth : Youssef saad
-*/
-
-/**
- * init_params - clears struct fields and reset buf
- * @params: the parameters struct
- * @ap: the argument pointer
+ * init_params - initializes the parameters struct
+ * with default values
  *
- * Return: void
+ * This function clears all the fields of the
+ * parameters struct and sets
+ * the default values. It also resets the buf.
+ *
+ * @params: a pointer to the parameters struct to initialize
+ * @ap: a va_list object that points to the list of arguments
  */
 void init_params(params_t *params, va_list ap)
 {

@@ -1,18 +1,14 @@
 #include "main.h"
 
 /**
- * printf file
- * 
- * Auth : Youssef saad
-*/
-
-/**
- * print_hex - prints unsigned hex numbers in lowercase
- * @ap: the argument pointer
- * @params: the parameters struct
+ * print_hex - Print an unsigned hexadecimal integer in lowercase.
  *
- * Return: bytes printed
+ * @ap: A pointer to the argument to print.
+ * @params: A pointer to a struct containing printing parameters.
+ *
+ * Return: The number of bytes printed.
  */
+
 int print_hex(va_list ap, params_t *params)
 {
 	unsigned long l;

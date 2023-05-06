@@ -1,17 +1,12 @@
 #include "main.h"
 
 /**
- * printf file
- * 
- * Auth : Youssef saad
-*/
-
-/**
- * print_char - prints character
- * @ap: argument pointer
- * @params: the parameters struct
+ * print_char - Prints a character.
  *
- * Return: number chars printed
+ * @ap: argument pointer.
+ * @params: pointer to parameters struct.
+ *
+ * Return: number of characters printed.
  */
 int print_char(va_list ap, params_t *params)
 {
@@ -28,11 +23,12 @@ int print_char(va_list ap, params_t *params)
 }
 
 /**
- * print_int - prints integer
- * @ap: argument pointer
- * @params: the parameters struct
+ * print_int - Prints an integer.
  *
- * Return: number chars printed
+ * @ap: argument pointer.
+ * @params: pointer to parameters struct.
+ *
+ * Return: number of characters printed.
  */
 int print_int(va_list ap, params_t *params)
 {
@@ -48,11 +44,12 @@ int print_int(va_list ap, params_t *params)
 }
 
 /**
- * print_string - prints string
- * @ap: argument pointer
- * @params: the parameters struct
+ * print_string - Prints a string.
  *
- * Return: number chars printed
+ * @ap: argument pointer.
+ * @params: pointer to parameters struct.
+ *
+ * Return: number of characters printed.
  */
 int print_string(va_list ap, params_t *params)
 {
@@ -90,11 +87,12 @@ int print_string(va_list ap, params_t *params)
 }
 
 /**
- * print_percent - prints string
- * @ap: argument pointer
- * @params: the parameters struct
+ * print_percent - Prints the '%' character.
  *
- * Return: number chars printed
+ * @ap: argument pointer.
+ * @params: pointer to parameters struct.
+ *
+ * Return: number of characters printed.
  */
 int print_percent(va_list ap, params_t *params)
 {
@@ -104,11 +102,13 @@ int print_percent(va_list ap, params_t *params)
 }
 
 /**
- * print_S - custom format specifier
- * @ap: argument pointer
- * @params: the parameters struct
+ * print_S - Prints a string, replacing
+ * non-printable characters with escape codes.
  *
- * Return: number chars printed
+ * @ap: argument pointer.
+ * @params: pointer to parameters struct.
+ *
+ * Return: number of characters printed.
  */
 int print_S(va_list ap, params_t *params)
 {
@@ -125,8 +125,8 @@ int print_S(va_list ap, params_t *params)
 			sum += _putchar('\\');
 			sum += _putchar('x');
 			hex = convert(*str, 16, 0, params);
-			if (!hex[1])
-				sum += _putchar('0');
+			if (hex == NULL)
+				return (-1);
 			sum += _puts(hex);
 		}
 		else

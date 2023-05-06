@@ -1,16 +1,12 @@
 #include "main.h"
 
 /**
- * printf file
- * 
- * Auth : Youssef saad
-*/
-
-/**
- * _printf - prints anything
- * @format: the format string
+ * _printf - prints formatted output to stdout
  *
- * Return: number of bytes printed
+ * @format: string containing format specifiers
+ *
+ * Return: the number of characters printed (excluding
+ * the null byte)
  */
 int _printf(const char *format, ...)
 {
